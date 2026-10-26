@@ -1,0 +1,82 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Palette from the plan, navy tuned to the paper-boat banner background. */
+  --color-paper: #f6f1e7;
+  --color-paper-deep: #ebe3d2;
+  --color-ink: #1b1b1f;
+  --color-ink-soft: #4a4a52;
+  --color-navy: #0b1c32;
+  --color-navy-soft: #16294a;
+  --color-plum: #7c5cd6;
+  /* Darker purple for text on paper (AA contrast). */
+  --color-plum-ink: #5a3db5;
+  --color-brick: #e2483d;
+  --color-brick-ink: #b8291f;
+  --color-sun: #f2c94c;
+
+  --font-display: 'Frank Ruhl Libre Variable', 'Frank Ruhl Libre', serif;
+  --font-hand: 'Amatic SC', cursive;
+  --font-sans: 'Assistant Variable', 'Assistant', system-ui, sans-serif;
+
+  --shadow-hard: 4px 4px 0 0 var(--color-ink);
+  --shadow-hard-sm: 2px 2px 0 0 var(--color-ink);
+  --shadow-hard-lg: 6px 6px 0 0 var(--color-ink);
+
+  --animate-rock: rock 7s ease-in-out infinite;
+
+  @keyframes rock {
+    0%,
+    100% {
+      transform: rotate(-2.5deg) translateY(0);
+    }
+    50% {
+      transform: rotate(2.5deg) translateY(-4px);
+    }
+  }
+}
+
+/* Hand-drawn, slightly uneven outline for buttons and cards. */
+@utility sketch {
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+}
+@utility sketch-alt {
+  border-radius: 15px 225px 15px 255px / 255px 15px 225px 15px;
+}
+
+/* A printed photo: thin white border and a soft paper shadow. */
+@utility print {
+  background: white;
+  padding: 0.4rem;
+  box-shadow:
+    0 1px 0 rgb(0 0 0 / 0.05),
+    0 10px 20px -12px rgb(27 27 31 / 0.55);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Leave room for the sticky header when jumping to a section. */
+    scroll-padding-top: 4.5rem;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply bg-paper font-sans text-ink antialiased;
+    /* Newspaper grain: faint noise over the cream background. */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.1 0 0 0 0 0.12 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-plum);
+    outline-offset: 3px;
+  }
+  .bg-navy :focus-visible,
+  .on-dark:focus-visible {
+    outline-color: var(--color-sun);
+  }
+}
