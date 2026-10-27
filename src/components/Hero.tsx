@@ -17,7 +17,7 @@ export function Hero() {
             fetchPriority="high"
             className="mx-auto w-44 origin-bottom motion-safe:animate-rock sm:w-52 md:mx-0 md:-ms-4"
           />
-          <h1 id="hero-title" className="mt-1 font-display text-7xl leading-none font-black tracking-tight sm:text-8xl">
+          <h1 id="hero-title" className="mt-1 font-display text-8xl leading-[0.9] font-bold sm:text-9xl">
             {artist.name}
           </h1>
           <p className="mt-2 font-hand text-4xl font-bold text-sun sm:text-5xl">{artist.tagline}</p>

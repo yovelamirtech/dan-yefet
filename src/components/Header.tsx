@@ -11,7 +11,7 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-5xl items-center justify-between gap-4 px-4 sm:px-6">
         <a href="#top" className="flex items-center gap-2" onClick={() => setOpen(false)}>
           <img src={asset(images.boatMark)} alt="" width={40} height={40} className="size-10 rounded-full border-2 border-ink" />
-          <span className="font-display text-2xl font-black">{artist.name}</span>
+          <span className="font-display text-3xl font-bold">{artist.name}</span>
         </a>
 
         <nav aria-label="ניווט ראשי" className="hidden md:block">
@@ -43,7 +43,7 @@ export function Header() {
           <ul className="mx-auto max-w-5xl px-4 py-2">
             {nav.map((item) => (
               <li key={item.id} className="border-b border-dashed border-ink/30 last:border-0">
-                <a href={`#${item.id}`} className="block py-3 font-display text-2xl font-bold" onClick={() => setOpen(false)}>
+                <a href={`#${item.id}`} className="block py-3 font-display text-3xl font-bold" onClick={() => setOpen(false)}>
                   {item.label}
                 </a>
               </li>

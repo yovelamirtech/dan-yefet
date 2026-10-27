@@ -39,7 +39,7 @@ export function LatestRelease({ release = releases.find((r) => r.id === latest.r
       <div className="mt-16">
         <h3 className="mb-4 flex flex-wrap items-baseline gap-x-3">
           <span className="font-hand text-3xl font-bold text-brick-ink">{clip.label}</span>
-          <span className="font-display text-3xl font-black">{clip.title}</span>
+          <span className="font-display text-4xl font-bold">{clip.title}</span>
         </h3>
         <YouTubeFacade youtubeId={clip.youtubeId} title={clip.title} poster={clip.poster} posterAlt={clip.posterAlt} />
         <ExternalLink

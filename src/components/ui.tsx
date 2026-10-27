@@ -55,7 +55,7 @@ export function SectionHeading({ kicker, title, id, onDark }: SectionHeadingProp
       <p className={`font-hand text-3xl font-bold leading-none ${onDark ? 'text-sun' : 'text-plum-ink'}`}>{kicker}</p>
       <h2
         id={id}
-        className={`font-display text-4xl font-black leading-tight sm:text-5xl ${onDark ? 'text-paper' : 'text-ink'}`}
+        className={`font-display text-5xl leading-none font-bold sm:text-6xl ${onDark ? 'text-paper' : 'text-ink'}`}
       >
         {title}
       </h2>

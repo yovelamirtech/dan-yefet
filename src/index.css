@@ -15,9 +15,9 @@
   --color-brick-ink: #b8291f;
   --color-sun: #f2c94c;
 
-  --font-display: 'Frank Ruhl Libre Variable', 'Frank Ruhl Libre', serif;
+  --font-display: 'Karantina', 'Heebo Variable', sans-serif;
   --font-hand: 'Amatic SC', cursive;
-  --font-sans: 'Assistant Variable', 'Assistant', system-ui, sans-serif;
+  --font-sans: 'Heebo Variable', 'Heebo', system-ui, sans-serif;
 
   --shadow-hard: 4px 4px 0 0 var(--color-ink);
   --shadow-hard-sm: 2px 2px 0 0 var(--color-ink);

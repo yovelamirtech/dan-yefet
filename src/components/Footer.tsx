@@ -9,7 +9,7 @@ export function Footer({ year = new Date().getFullYear() }: { year?: number }) {
         <div className="flex items-center gap-3">
           <img src={asset(images.boatMark)} alt="" width={56} height={56} loading="lazy" className="size-14 rounded-full border-2 border-paper" />
           <div>
-            <p className="font-display text-2xl font-black">{artist.name}</p>
+            <p className="font-display text-3xl font-bold">{artist.name}</p>
             <p lang="en" className="text-sm text-paper/80">
               {artist.nameEn}
             </p>

@@ -16,7 +16,7 @@ export function Shows({ shows = defaultShows, today = new Date() }: ShowsProps) 
     <Section id="theater" labelledBy="theater-title" className="bg-paper-deep/60">
       <SectionHeading kicker="על הבמה" title="מוזיקה לתאטרון והופעות" id="theater-title" />
 
-      <h3 className="mb-4 font-display text-2xl font-bold">הופעות קרובות</h3>
+      <h3 className="mb-4 font-display text-3xl font-bold">הופעות קרובות</h3>
       {upcoming.length > 0 ? (
         <ul className="grid gap-6 md:grid-cols-2">
           {upcoming.map((show) => (
@@ -37,7 +37,7 @@ export function Shows({ shows = defaultShows, today = new Date() }: ShowsProps) 
 
       {past.length > 0 && (
         <>
-          <h3 className="mt-12 mb-4 font-display text-2xl font-bold">הופעות שעברו</h3>
+          <h3 className="mt-12 mb-4 font-display text-3xl font-bold">הופעות שעברו</h3>
           <ul className="grid gap-6 md:grid-cols-2">
             {past.map((show) => (
               <li key={show.id}>

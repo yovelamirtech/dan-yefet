@@ -36,7 +36,7 @@ export function ReleaseCard({ release, index = 0 }: { release: Release; index?: 
       </ExternalLink>
 
       <div className={hasTracks ? 'row-span-2' : 'mt-4'}>
-        <h3 className="font-display text-xl leading-snug font-bold sm:text-2xl">
+        <h3 className="font-display text-2xl leading-tight font-bold sm:text-3xl">
           <ExternalLink href={release.spotifyUrl} className="hover:text-plum-ink">
             {release.title}
           </ExternalLink>

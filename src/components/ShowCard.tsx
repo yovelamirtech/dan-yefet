@@ -14,7 +14,7 @@ export function ShowCard({ show, past = false }: { show: Show; past?: boolean })
         </span>
       )}
       {show.note && <p className="font-hand text-2xl font-bold text-plum-ink">{show.note}</p>}
-      <h3 className="font-display text-3xl font-black">{show.title}</h3>
+      <h3 className="font-display text-4xl font-bold">{show.title}</h3>
       <dl className="mt-3 grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 text-lg">
         <dt className="font-semibold text-ink-soft">מתי</dt>
         <dd>

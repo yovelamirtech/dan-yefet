@@ -13,9 +13,9 @@
     "images": "node scripts/fetch-images.mjs"
   },
   "dependencies": {
-    "@fontsource-variable/assistant": "^5.3.0",
-    "@fontsource-variable/frank-ruhl-libre": "^5.3.0",
+    "@fontsource-variable/heebo": "^5.3.0",
     "@fontsource/amatic-sc": "^5.3.0",
+    "@fontsource/karantina": "^5.3.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1"
   },
